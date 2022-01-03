@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Evaluate News NLP</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            Evaluate News NLP
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <form class="" onsubmit="return Client.handleSubmit(event)">
+                <label for="url">Enter a URL of an article / a blog to discover its sentiment:</label>
+                <input id="url" type="text" name="url" value="" placeholder="URL">
+                <button type="submit" onclick="return Client.handleSubmit(event)"
+                    onsubmit="return Client.handleSubmit(event)">Submit</button>
+            </form>
+        </section>
+
+        <section id="Body">
+            <div id="Results">
+                <h3>Results</h3>
+                <dl>
+                    <dt>Agreement</dt>
+                    <dd class='agreement'>...</dd>
+                    <dt>Confidence</dt>
+                    <dd class='confidence'>...</dd>
+                    <dt>Irony</dt>
+                    <dd class='irony'>...</dd>
+                    <dt>Model</dt>
+                    <dd class='model'>...</dd>
+                    <dt>Score tag</dt>
+                    <dd class="score_tag">...</dd>
+                    <dt>Subjectivity</dt>
+                    <dd class='subjectivity'>...</dd>
+                </dl>
+            </div>
+            <div id="Spinner"></div>
+        </section>
+    </main>
+
+    <footer>
+        <small>&copy; Copyright 2022, ME</small>
+    </footer>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+    </script>
+</body>
+
+</html>

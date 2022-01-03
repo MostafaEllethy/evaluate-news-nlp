@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+html,
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+}
+
+#Body {
+    display: none;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 3px;
+    background-color: white;
+    padding: 0 20px;
+    justify-content: center;
+
+    h3 {
+        text-align: center;
+        font-size: 1.5rem;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+        padding: 15px;
+        color: #1a237e;
+    }
+
+}
+
+#Results {
+    display: none;
+    width: 100%;
+
+    dl {
+        margin-top: 0.75rem;
+    }
+
+    dt {
+        font-weight: 300;
+        font-size: 0.95rem;
+        color: #263238;
+    }
+
+    dd {
+        font-weight: 400;
+        margin: 0.375rem 0 1rem 0.5rem;
+        color: #0d47a1;
+    }
+}
+
+#Spinner {
+    display: none;
+    margin: 20px 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: transparent;
+    border-top: 4px solid #fff;
+    border-right: 4px solid #fff;
+    border-bottom: 4px solid #777;
+    border-left: 4px solid #777;
+    -webkit-animation: loading 1.2s infinite linear;
+    -moz-animation: loading 1.2s infinite linear;
+    -ms-animation: loading 1.2s infinite linear;
+    animation: loading 1.2s infinite linear;
+}
+
+/* Animation */
+@-webkit-keyframes loading {
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@-moz-keyframes loading {
+    to {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-ms-keyframes loading {
+    to {
+        -ms-transform: rotate(360deg);
+    }
+}
+
+@keyframes loading {
+    to {
+        transform: rotate(360deg);
+    }
+}

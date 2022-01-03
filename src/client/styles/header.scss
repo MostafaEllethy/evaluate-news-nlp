@@ -1,0 +1,13 @@
+header {
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+    background-color: #1a237e;
+
+    .logo {
+        font-size: 1.75rem;
+        color: white;
+        font-weight: bold;
+    }
+}

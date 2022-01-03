@@ -1,0 +1,29 @@
+form {
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 3px;
+    padding: 40px;
+    background-color: white;
+
+    input {
+        padding: 10px 15px;
+        font-size: 0.925rem;
+        width: 100%;
+        line-height: 16px;
+        margin: 15px 0;
+    }
+
+    button {
+        width: 100%;
+        font-size: 1rem;
+        padding: 10px;
+        background-color: #1a237e;
+        border: 0;
+        color: white;
+        font-weight: 500;
+
+        &:hover {
+            background-color: #283593;
+            cursor: pointer;
+        }
+    }
+}
