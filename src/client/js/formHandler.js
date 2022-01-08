@@ -23,7 +23,7 @@ function handleSubmit(event) {
     results.style.display = 'none'
     spinner.style.display = 'block'
 
-    fetch(`http://localhost:8081/api?url=${url}`)
+    fetch(`${API}?url=${url}`)
         .then(res => res.json())
         .then(function (res) {
             spinner.style.display = 'none'

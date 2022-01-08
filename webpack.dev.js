@@ -1,14 +1,13 @@
-import webpack from 'webpack'
 import { merge } from 'webpack-merge'
-import webpackBase from './webpack.base.js'
+import webpackBase, { defineBasePlugin } from './webpack.base.js'
+
+const MODE = 'development'
 
 export default merge(webpackBase, {
-    mode: 'development',
+    mode: MODE,
     devtool: 'source-map',
     plugins: [
-        new webpack.DefinePlugin({
-            'ENV': JSON.stringify('development')
-        })
+        defineBasePlugin(MODE)
     ]
 })
 
