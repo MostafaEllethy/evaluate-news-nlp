@@ -1,13 +1,9 @@
-import { merge } from 'webpack-merge'
-import webpackBase, { defineBasePlugin } from './webpack.base.js'
-import { GenerateSW } from 'workbox-webpack-plugin'
+const { merge } = require('webpack-merge')
+const webpackBase = require('./webpack.base.js')
+const { GenerateSW } = require('workbox-webpack-plugin')
 
-const MODE = 'production'
-
-export default merge(webpackBase, {
-    mode: 'production',
-    plugins: [
-        new GenerateSW(),
-        defineBasePlugin(MODE)
-    ]
-})
+module.exports = (env, options) => {
+    return merge(webpackBase(options), {
+        plugins: [new GenerateSW()]
+    })
+}
