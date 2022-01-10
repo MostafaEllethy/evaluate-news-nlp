@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --verbose",
-    "start": "node src/server/index.js",
+    "start": "node src/server/index.mjs",
     "build": "webpack --config webpack.prod.js --mode production",
     "dev": "webpack-dev-server --config webpack.dev.js --mode development"
   },
